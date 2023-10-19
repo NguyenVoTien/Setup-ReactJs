@@ -4,9 +4,11 @@ import Home from '../page/Home';
 import Navbar from '../page/Navbar';
 import { useRoutes } from 'react-router-dom';
 import OutletRouter from './OutLetRouter';
+import UseRef from '../component/useRef';
+import Notfound from '../page/Notfound';
 
 const Routers = () => {
-  let Routers = useRoutes([
+  let elements = useRoutes([
     {
       path: '/',
       element: (
@@ -16,29 +18,29 @@ const Routers = () => {
       ),
       chilrend: [
         {
-          element: <Home />,
           index: true,
+          element: <Home />,
         },
         {
-          path: '/About',
-          children: [
-            {
-              element: <About />,
-            },
-          ],
+          path: 'About',
+          element: <About />,
         },
         {
-          path: '/Detail',
-          children: [
-            {
-              element: <Detail />,
-            },
-          ],
+          path: 'Detail',
+          element: <Detail />,
+        },
+        {
+          path: '/UseRef',
+          element: <UseRef />,
+        },
+        {
+          path: '/*',
+          element: <Notfound />,
         },
       ],
     },
   ]);
-  return Routers;
+  return elements;
 };
 
 export default Routers;

@@ -1,4 +1,5 @@
-import { NavLink } from 'react-router-dom';
+import NavlinkActive from '../Routers/NavlinkActive';
+// import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {
   const navLinkStyle = ({ isActive }) => {
@@ -13,15 +14,18 @@ const Navbar = () => {
   // const Auth = useAuth();
   return (
     <>
-      <NavLink style={navLinkStyle} to="/">
+      <NavlinkActive style={navLinkStyle} to="/">
         Home
-      </NavLink>
-      <NavLink style={navLinkStyle} to="/About">
+      </NavlinkActive>
+      <NavlinkActive style={navLinkStyle} to="/About">
         About
-      </NavLink>
-      <NavLink style={navLinkStyle} to="/Detail">
+      </NavlinkActive>
+      <NavlinkActive style={navLinkStyle} to="/Detail">
         Detail
-      </NavLink>
+      </NavlinkActive>
+      <NavlinkActive style={navLinkStyle} to="/UseRef">
+        UseRef
+      </NavlinkActive>
     </>
   );
 };

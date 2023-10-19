@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom';
 
-const navlinkActive = (probs) => {
+const NavlinkActive = (probs) => {
   return (
     <NavLink
       style={({ isActive }) => {
@@ -11,4 +11,4 @@ const navlinkActive = (probs) => {
   );
 };
 
-export default navlinkActive;
+export default NavlinkActive;
